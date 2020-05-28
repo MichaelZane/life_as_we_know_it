@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+</head>
+<body>
+  <header>
+    
+    <div class="counters">
+      <p class="ctr" >Generation: <span id="counter" >0 </span> </p>     
+    </div>
+  </header>
+  
+    <div class="container" >
+      <div>
+        <h3>The Game Of Life</h3>
+        <p class='description' >
+          
+          <br/>
+          The game of life, also known as life, is a zero player game, which means it is determined by it's state, needing no further input.  You initiate the game by using the randomly generated pattern or by creating your own on the blank grid then observing it's evolution of generations.  It is an example of Turing complete thus allowing to simulate a universal constructor and any Turing machine.<br/>
+          <br/>
+          It follows these simple rules at each step:<br/>
+          1. Any live cell with two or three live neighbours survives.<br/>
+          2. Any dead cell with three live neighbours becomes a live cell.<br/>
+          3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.<br/>
+          <br/>
+          These rules apply simultaneously to all cells, causing birth and death and this occurs during a generation. The preceding generation is derived from the previous as the rules continue to be applied repeatedly for each generation.
+
+        </p>
+      </div>
+    <div>
+      <canvas class="canvas"></canvas>
+    </div>
+    </div>
+    <div class="row" >
+
+      <button class="btn" onclick="pause()">Pause/Start</button>
+
+      <button class="btn" onclick="resetGame()">Reset</button>
+
+      <button class="btn" onclick="clearGrid()">Clear</button>
+      
+      <button class="btn" onclick='speedUp()' >Speed up</button>
+      <button class="btn" onclick="slowDown()">Slow down</button>
+    </div>
+    
+    
+    <script src="index.js"></script>
+
+    
+</body>
+</html>

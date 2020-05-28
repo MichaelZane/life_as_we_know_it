@@ -1,0 +1,43 @@
+body {
+    background-color: slategrey;
+}
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+h3 {
+    text-align: center;
+}
+.counters {
+    width: 48%;
+    margin-left: 2%;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.canvas {
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    
+    margin-left: 3%;
+    width: 45%;
+}
+
+.description {
+    margin: 3%;
+    margin-left: 2%;
+}
+
+.btn {
+    width: 15%;
+    height: 8%;
+    margin: 2%;
+    color: mediumslateblue;
+    background-color: mintcream;
+}
