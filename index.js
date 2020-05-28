@@ -31,7 +31,7 @@ let playing = true
 
 let generation = 0
 
-speed = 600
+speed = 400
 
 requestAnimationFrame(updateGrid)
 
@@ -109,7 +109,7 @@ function gridMaker() {
             
             getCtx.beginPath()
             getCtx.rect(column * resolution, row * resolution, resolution, resolution)
-            getCtx.fillStyle = cell ? "#460cea" : "white"
+            getCtx.fillStyle = cell ? "#0caaea" : "#00000d"
             getCtx.fill()
             getCtx.stroke()
         }
