@@ -3,7 +3,9 @@ body {
     font-family: "Chelsea Market", cursive;
 }
 
-
+.canvas-wrap {
+    margin-right: 3%;
+}
 
 .container {
     display: flex;
@@ -28,8 +30,8 @@ h3 {
     display: flex;
     justify-content: center;
     
-    margin-left: 3%;
-    width: 45%;
+    margin-left: 2.5%;
+    width: 47%;
 }
 
 .wrapper {
@@ -44,6 +46,37 @@ h3 {
 
 .btn {
     width: 18%;
+    height: 10%;
+    margin: 2%;
+    color: #0caaea;
+    background-color: #00000d;
+    font-family: "Chelsea Market", cursive;
+    font-size: small;
+    border-radius: 5px;
+}
+
+.btn2 {
+    width: 17%;
+    height: 10%;
+    margin: 2%;
+    color: #0caaea;
+    background-color: #00000d;
+    font-family: "Chelsea Market", cursive;
+    font-size: small;
+    border-radius: 5px;
+}
+.btn3 {
+    width: 22%;
+    height: 10%;
+    margin: 2%;
+    color: #0caaea;
+    background-color: #00000d;
+    font-family: "Chelsea Market", cursive;
+    font-size: small;
+    border-radius: 5px;
+}
+.btn4 {
+    width: 30%;
     height: 10%;
     margin: 2%;
     color: #0caaea;

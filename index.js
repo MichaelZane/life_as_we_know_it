@@ -6,11 +6,11 @@ const getCtx = canvas.getContext('2d')
 
 
 const resolution = 10
-canvas.width = 700
-canvas.height = 700
+canvas.width = 800
+canvas.height = 800
 
-const makeRows = canvas.width / resolution
-const makeCols = canvas.height / resolution
+let makeRows = canvas.width / resolution
+let makeCols = canvas.height / resolution
 //Grid to display cells.
 
 let grid
@@ -22,7 +22,7 @@ function makeGrid(empty=false) {
     return new Array(makeCols).fill(null)
         .map(() => new Array(makeRows).fill(null)
             .map(() => empty ? 0 : Math.floor(Math.random() * 2)))
-
+    
 }
 
 grid = makeGrid()
@@ -34,6 +34,8 @@ let generation = 0
 speed = 400
 
 requestAnimationFrame(updateGrid)
+
+//game loop
 
 function updateGrid() {
     if (playing) {
@@ -101,6 +103,7 @@ function newGrid() {
 }
 
 
+
 function gridMaker() {
     
     for(let column = 0; column < grid.length; column++) {
@@ -116,12 +119,16 @@ function gridMaker() {
     }
     
 }
+
+//displaying the generation count to the DOM
+
 function genCount(){
     
     document.getElementById("counter").innerHTML = generation
    
 }
 
+// helper functions for the buttons
 
 function pause() {
     
@@ -147,7 +154,9 @@ function clearGrid(){
 function resetGame() {
 
     grid = makeGrid(false)
+
     generation = 0
+    
     gridMaker()
     
 
@@ -169,16 +178,45 @@ function canvasClick(event) {
         playing = false
     }
 
-    let rowClicked = Math.floor(event.layerX / 10)
-    let colClicked = Math.floor(event.layerY / 10)
+    let rowClicked = Math.floor(event.layerX / resolution)
+    let colClicked = Math.floor(event.layerY / resolution)
 
     grid[rowClicked][colClicked] = 1
-    
+
     gridMaker()
-    console.log(rowClicked, colClicked)
+    // if (!grid[rowClicked][colClicked] === grid[rowClicked][colClicked]) {
+    //     grid[rowClicked][colClicked] = 1
+    //     gridMaker()
+    // } else {
+            
+    //     grid[rowClicked][colClicked] === grid[rowClicked][colClicked]
+    //     grid[rowClicked][colClicked] = 0
+    //     gridMaker()
+    // }
 }
-
-
+function gosperGun() {
+    clearGrid()
+    .map(() => new Array(gosperGun))
+    console.log(gosperGun, Array)
+}
+function sizeUp() {
+    
+    canvas.width += 50
+    canvas.height += 50
+    makeRows = canvas.width / resolution
+    makeCols = canvas.height / resolution
+    resetGame()
+    
+}
+function sizeDown() {
+    
+    canvas.width -= 50
+    canvas.height -= 50
+    makeRows = canvas.width / resolution
+    makeCols = canvas.height / resolution
+    
+    resetGame()
+}
 
 
 
