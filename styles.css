@@ -1,10 +1,47 @@
 body {
     background-color: slategrey;
     font-family: "Chelsea Market", cursive;
+	
+	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.page-wrapper {
+	max-width: 900px;
+	color: whitesmoke;
+	margin: 5%;
+	padding: 2%;
+    
+     
+}
+
+.wrapper {
+    width: 100%;
 }
 
 .canvas-wrap {
-    margin-right: 3%;
+	text-align: center;
+    width: 100%;
+}
+
+.counters {
+
+    width: 100%;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.canvas {
+
+
 }
 
 .container {
@@ -12,76 +49,128 @@ body {
     flex-direction: row-reverse;
     
 }
+
 h3 {
-    text-align: center;
-    color: honeydew;
-}
-.counters {
-    width: 48%;
-    margin-left: 2%;
-    font-size: large;
-    display: flex;
-    justify-content: center;
-    color: white;
+    text-align: left;
+	color: whitesmoke;
+	margin-bottom: 2%;
 }
 
+h2 {
+	text-align: center;
+
+}
 
 .row {
     display: flex;
     justify-content: center;
-    
-    margin-left: 2.5%;
-    width: 47%;
+
+    width: 100%;
 }
 
-.wrapper {
-    width: 50%;
-}
+
 
 .description {
+
     margin: 3%;
-    margin-left: 2%;
-    color: #f0ffff;
+	color: whitesmoke;
+
 }
 
 .btn {
-    width: 18%;
+    width: 20%;
     height: 10%;
     margin: 2%;
-    color: #0caaea;
-    background-color: #00000d;
+    color: whitesmoke;  
     font-family: "Chelsea Market", cursive;
     font-size: small;
-    border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
 }
 
 .btn2 {
     width: 17%;
     height: 10%;
     margin: 2%;
-    color: #0caaea;
-    background-color: #00000d;
+    color: whitesmoke;
     font-family: "Chelsea Market", cursive;
     font-size: small;
-    border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
 }
 .btn3 {
     width: 22%;
     height: 10%;
     margin: 2%;
-    color: #0caaea;
-    background-color: #00000d;
+    color: whitesmoke;
     font-family: "Chelsea Market", cursive;
     font-size: small;
-    border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
 }
 .btn4 {
     width: 30%;
     height: 10%;
     margin: 2%;
-    color: #0caaea;
-    background-color: #00000d;
+    color: whitesmoke;
     font-family: "Chelsea Market", cursive;
     font-size: small;
-    border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+@media only screen and (min-width: 798px) {
+
+	.page-wrapper {
+		width: 750px;
+	}
+	.canvas {
+		width: 700px;
+		height: 700px;
+	}
+
+}
+
+@media only screen and (max-width: 501px) {
+	.page-wrapper {	
+		width: 450px;
+		flex-direction: column-reverse;
+	}
+	.canvas {
+		width: 450px;
+		height: 450px;
+	}
+	.row {
+		width: 450px;
+		align-content: center;
+	}
+	.canvas-wrap {
+		align-content: center;
+	}
+}
+
+@media only screen and (min-width: 998px) {
+	.page-wrapper {
+		width: 100%;
+	}
+	.canvas {
+		width: 800px;
+		height: 800px;
+	}
+	.row {
+		width: 800px;
+		align-content: center;
+	}
 }

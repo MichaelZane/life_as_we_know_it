@@ -8,74 +8,64 @@
     <title>Game of Life</title>
 </head>
 <body>
-  <div class="page-wrapper"
-    <header>
-      
+  <div class="page-wrapper"  
+    <div class="wrapper">
+      <h2>The Game Of Life</h2>
+      <p class='description' >
+        
+        <br/>
+        The game of life, also known as life, is a zero player game, which means it is determined by it's state, needing no further input.  You initiate the game by using the randomly generated pattern or by creating your own on the blank grid then observing it's evolution of generations.  It is an example of Turing complete thus allowing to simulate a universal constructor and any Turing machine.<br/>
+        It follows these simple rules at each step:<br/>
+        1. Any live cell with two or three live neighbors survives.<br/>
+        2. Any dead cell with three live neighbors becomes a live cell.<br/>
+        3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.<br/>
+        These rules apply simultaneously to all cells, causing birth and death and this occurs during a generation. The preceding generation is derived from the previous as the rules continue to be applied repeatedly for each generation.
+        <br/>
+        <br/>
+        <h3>How To Control The Game</h3><br/>
+        <br/>
+        In this instance the edges are the boundary and does not wrap around to the other edge.  The buttons perform the following operations.<br/>
+        <br/>
+        <h3>Pause/start </h3> It will pause the game and a second click will start the game again.  If you have cleared the board to add your own pattern, it will start your new game.<br/>
+        <br/>
+        <h3>Reset </h3>  It will reset the board with a new random configuration at anytime during the game, although if it is paused you can hit the pause/start button to start it.<br/>
+        <br/>
+        <!-- Size Up:  This will increase the size of the grid by 50 on width and height.<br/>
+        <br/>
+        Size Down:  THis will decrease the size of the grid by 50 on width and height.<br/> -->
+        <br/>
+        <h3>Clear </h3> This button will clear the board to allow you to click cells to make your own pattern.<br/>
+        <br/>
+        <h3>Faster</h3>  This will speed up the game for each click of the button.<br/>
+        <br/>
+        <h3>Slower</h3>  This will slow the game down for each button press.<br/>
+        <br/>
+        <br/>
+      </p>        
+    </div>
+    <div class="canvas-wrap">
+  
       <div class="counters">
         <p class="ctr" >Generation: <span id="counter" >0 </span> </p>     
       </div>
-    </header>
-    
-      <div class="container" >
-        <div class="wrapper">
-          <h3>The Game Of Life</h3>
-          <p class='description' >
-            
-            <br/>
-            The game of life, also known as life, is a zero player game, which means it is determined by it's state, needing no further input.  You initiate the game by using the randomly generated pattern or by creating your own on the blank grid then observing it's evolution of generations.  It is an example of Turing complete thus allowing to simulate a universal constructor and any Turing machine.<br/>
-            It follows these simple rules at each step:<br/>
-            1. Any live cell with two or three live neighbours survives.<br/>
-            2. Any dead cell with three live neighbours becomes a live cell.<br/>
-            3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.<br/>
-            These rules apply simultaneously to all cells, causing birth and death and this occurs during a generation. The preceding generation is derived from the previous as the rules continue to be applied repeatedly for each generation.
-            <br/>
-            <br/>
-            How To Control The Game:<br/>
-            <br/>
-            In this instance the edges are the boundary and does not wrap around to the other edge.  The buttons perform the following operations.<br/>
-            <br/>
-            Pause/start Button: It will pause the game and a second click will start the game again.  If you have cleared the board to add your own pattern, it will start your new game.<br/>
-            <br/>
-            Reset Button:  It will reset the board with a new random configuration at anytime during the game, although if it is paused you can hit the pause/start button to start it.<br/>
-            <br/>
-            Size Up:  This will increase the size of the grid by 50 on width and height.<br/>
-            <br/>
-            Size Down:  THis will decrease the size of the grid by 50 on width and height.<br/>
-            <br/>
-            Clear Button: This button will clear the board to allow you to click cells to make your own pattern.<br/>
-            <br/>
-            Faster:  This will speed up the game for each click of the button.<br/>
-            <br/>
-            Slower:  THis will slow the game down for each button press.<br/>
-            <br/>
-            
-
-
-
-          </p>
-        </div>
+      <canvas class="canvas"></canvas>
+        
       
-        <canvas class="canvas"></canvas>
-     
-      </div>
       <div class="row" >
 
         <button class="btn" onclick="pause()">Pause/Start</button>
-
         <button class="btn" onclick="resetGame()">Reset</button>
-        <button class="btn" onclick="sizeUp()">Size Up</button>
-        <button class="btn4" onclick="sizeDown()">Size Down</button>
+        <!-- <button class="btn" onclick="sizeUp()">Size Up</button>
+        <button class="btn4" onclick="sizeDown()">Size Down</button> -->
         <button class="btn" onclick="clearGrid()">Clear</button>
         <!-- <button class="btn3" onclick='gosperGun()'>Load Gun</button> -->
         <button class="btn2" onclick='speedUp()' >Faster</button>
-        <button class="btn2" onclick="slowDown()">Slower</button>
-        
+        <button class="btn2" onclick="slowDown()">Slower</button>        
         
       </div>
-      
+    </div>  
       <script src="patterns.js"></script>
       <script src="index.js"></script>
-
   </div>  
 </body>
 </html>
