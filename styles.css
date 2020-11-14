@@ -39,11 +39,6 @@ body {
     color: whitesmoke;
 }
 
-.canvas {
-
-
-}
-
 .container {
     display: flex;
     flex-direction: row-reverse;
@@ -155,6 +150,7 @@ h2 {
 	.row {
 		width: 500px;
 		align-content: center;
+		margin-bottom: 5%;
 	}
 	.canvas-wrap {
 		align-content: center;
@@ -173,6 +169,6 @@ h2 {
 	.row {
 
 		width: 100%;
-
+		margin-bottom: 5%;
 	}
 }
