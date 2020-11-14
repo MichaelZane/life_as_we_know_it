@@ -5,6 +5,10 @@ body {
 	
 }
 
+.ctr {
+	margin-bottom: 1%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -46,9 +50,12 @@ body {
 }
 
 h3 {
+	width: 14%;
     text-align: left;
 	color: whitesmoke;
 	margin-bottom: 2%;
+	
+
 }
 
 h2 {
@@ -73,7 +80,7 @@ h2 {
 }
 
 .btn {
-    width: 17%;
+    width: 12%;
     height: 10%;
     margin: 2%;
     color: whitesmoke;  
@@ -87,7 +94,7 @@ h2 {
 }
 
 .btn2 {
-    width: 17%;
+    width: 8%;
     height: 10%;
     margin: 2%;
     color: whitesmoke;
@@ -99,32 +106,7 @@ h2 {
 	cursor: pointer;
 	background-color: transparent;
 }
-.btn3 {
-    width: 17%;
-    height: 10%;
-    margin: 2%;
-    color: whitesmoke;
-    font-family: "Chelsea Market", cursive;
-    font-size: small;
-	border-radius: 5px;
-	border: none;
-	text-decoration: none;
-	cursor: pointer;
-	background-color: transparent;
-}
-.btn4 {
-    width: 30%;
-    height: 10%;
-    margin: 2%;
-    color: whitesmoke;
-    font-family: "Chelsea Market", cursive;
-    font-size: small;
-	border-radius: 5px;
-	border: none;
-	text-decoration: none;
-	cursor: pointer;
-	background-color: transparent;
-}
+
 
 @media only screen and (min-width: 798px) {
 
@@ -156,6 +138,7 @@ h2 {
 		align-content: center;
 		max-width: 800px;
 	}
+	
 }
 
 @media only screen and (min-width: 800px) {
